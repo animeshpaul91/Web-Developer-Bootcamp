@@ -45,5 +45,3 @@ const renderJsonResponse = (res) => {
   // manipulates responseField to show the returned JSON.
   responseField.innerHTML = `<pre>${rawJson}</pre>`
 }
-
-bb85072572f54766a6def951cff9e58b
