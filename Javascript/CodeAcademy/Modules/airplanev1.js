@@ -1,4 +1,4 @@
-export let availableAirplanes = [];
+let availableAirplanes = [];
 availableAirplanes.push({
     name: 'AeroJet',
     fuelCapacity: 800,
@@ -6,15 +6,16 @@ availableAirplanes.push({
     maxSpeed: 1200,
     minSpeed: 300
 });
+
 availableAirplanes.push({
     name: 'SkyJet', fuelCapacity: 500,
     availableStaff: ['pilots', 'flightAttendants'], maxSpeed: 800, minSpeed: 200
 });
 
-export let flightRequirements = {requiredSpeedRange: 700};
+let flightRequirements = {requiredSpeedRange: 700};
 flightRequirements.requiredStaff = 4;
 
-export function meetsStaffRequirements(availableStaff, requiredStaff) {
+function meetsStaffRequirements(availableStaff, requiredStaff) {
     return availableStaff.length >= requiredStaff;
 }
 
@@ -23,4 +24,4 @@ function meetsSpeedRangeRequirements(maxSpeed, minSpeed, requiredSpeedRange) {
     return range > requiredSpeedRange;
 }
 
-export default meetsSpeedRangeRequirements;
+module.exports = {availableAirplanes, flightRequirements, meetsStaffRequirements, meetsSpeedRangeRequirements};

@@ -1,6 +1,4 @@
-import { availableAirplanes, flightRequirements, meetsStaffRequirements } from './airplanev1';
-
-import meetsSpeedRangeRequirements from './airplanev1';
+const { availableAirplanes, flightRequirements, meetsStaffRequirements, meetsSpeedRangeRequirements } = require('./airplanev1');
 
 function displayFuelCapacity() {
     availableAirplanes.forEach(function(element) {
